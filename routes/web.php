@@ -26,4 +26,5 @@ Route::group(['prefix'=> 'activity'], function(){
 });
 Route::group(['prefix'=> 'User'], function(){
     Route::get('index', 'User/Usercontroller@inddex')->name('User');
+    Route::get('cek-kegiatan','Kegiatan\KegiatanController@index')->name('users.kegiatan.index');
 });
