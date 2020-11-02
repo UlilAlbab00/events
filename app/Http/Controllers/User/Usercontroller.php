@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\User;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class ActivityController extends Controller
+class Usercontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class ActivityController extends Controller
      */
     public function index()
     {
-        return view('backend.activity.index');
+        return view('user.index');
     }
 
     /**
@@ -23,9 +24,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-       $getcode = $this->activity->generatecode();
-
-        return view("backend.activity.create", compatc('getcode'));
+        //
     }
 
     /**
@@ -36,9 +35,7 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        $activity = Activty::create($this->validateRequest());
-        $this->storeImage($activity);
-        return redirect()->back()->with(['success' => 'Activty berhasil dibuat']);
+        //
     }
 
     /**
